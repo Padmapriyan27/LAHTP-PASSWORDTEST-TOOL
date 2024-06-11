@@ -46,6 +46,11 @@ int main(int argc, char *argv[]){
         }
         // Validate password
         char *password = argv[2];
+        if(strlen(password) > PASSWORD_LENGTH){
+            perror("Error: Your password length is out of bounds. Please enter a password within 15 characters.\n");
+            exit(EXIT_FAILURE);
+            return 1;
+        }
         printf("**********Password Validation**********\n");
         printf("Entered password: %s\n", password);
 
@@ -69,7 +74,7 @@ int main(int argc, char *argv[]){
         printf("Password score is: %d\n", score);
 
         // If the password is not strongest, print conditions for a strong password
-        if (score < 9) {
+        if (score < 8) {
             printf(">>>>>>>>>>>>>>Your password must have satisfied under these conditions<<<<<<<<<<<<<<\n");
             printf("\t[*]Your password must be minimum of 8 characters...\n");
             printf("\t[*]Your password must have one uppercase character...\n");
@@ -121,7 +126,7 @@ void generate_password(){
     const char upper[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const char lower[] = "abcdefghijklmnopqrstuvwxyz";
     const char digits[] = "0123456789";
-    const char symbols[] = "!@#$%^&*()_+[]{}|";
+    const char symbols[] = "!@#$&*()_+|";
     int i, index;
 
      srandom(time(NULL));
@@ -172,20 +177,21 @@ int check_password(char *password) {
         range = 1;
     }
     if (uppercase >= 1) {
-        range = range + 2;
+        range += 2;
     }
     if (lowercase >= 3) {
-        range = range + 2;
+        range += 2;
     }
     if (digit >= 3) {
-        range = range + 2;
+        range += 2;
     }
     if (specialchar >= 1) {
-        range = range + 2;
+        range += 2;
     }
 
     if (sequenceDetected) {
-        printf("Your password contains a sequence of numbers\n");
+        printf("Your password contains a sequence of numbers, So please use unsequence order of numbers.\n");
+        range -= 1;
     }
 
     return range;

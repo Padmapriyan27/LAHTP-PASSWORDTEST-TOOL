@@ -1,13 +1,13 @@
 /*
-************************************************************
-*  Hey,This is the LAHTP-PASSWORDTEST tool v-1.0, this for *
-*              1.Test your password strength               *
-*              2.Generate strong password                  *
-*   This tool helps you to test your input password and    *
-*   validate whether your password is weak or weakest or   *
-*   medium or strong or strongest and rate your password   *
-*   score with their corresponding strength.               *                 
-************************************************************
+**************************************************************
+*  Hey,This is the LAHTP-PASSWORDTEST tool V-1.0.1, this for *
+*              1.Test your password strength                 *
+*              2.Generate strong password                    *
+*   This tool helps you to test your input password and      *
+*   validate whether your password is weak or weakest or     *
+*   medium or strong or strongest and rate your password     *
+*   score with their corresponding strength.                 *                 
+**************************************************************
 */
 
 #include <stdio.h>
@@ -111,7 +111,7 @@ static void print_help(void) {
     printf("                     ██    ██    ██ ██    ██ ██                                                            \n");
     printf("                     ██     ██████   ██████  ███████                                                       \n");
 
-    printf("\nLAHTP-PASSWORDTEST TOOL V-1.0.1\n");
+    printf("\nLAHTP-PASSWORDTEST TOOL V-1.0.1.1\n");
     printf("Options: \n");
     printf("\t-h                  Show this help message and exit\n");
     printf("\t-g                  Generate a strong password\n");

@@ -1,6 +1,6 @@
-# LAHTP-PASSWORDTEST Tool v-1.0 for Linux
+# LAHTP-PASSWORDTEST Tool V-1.0.1 for Linux
 
-Welcome to the LAHTP-PASSWORDTEST tool v-1.0. This tool provides functionalities to:
+Welcome to the LAHTP-PASSWORDTEST tool V-1.0.1. This tool provides functionalities to:
 1. Test the strength of a given password.
 2. Generate a strong password.
 
@@ -64,4 +64,4 @@ gcc -o password_tool password_tool.c
 
 ---
 
-This README provides a comprehensive guide on how to use the LAHTP-PASSWORDTEST tool v-1.0. If you have any questions or need further assistance, please refer to the help option `-h` or contact the author.
+This README provides a comprehensive guide on how to use the LAHTP-PASSWORDTEST tool V-1.0.1. If you have any questions or need further assistance, please refer to the help option `-h` or contact the author.

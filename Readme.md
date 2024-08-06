@@ -1,67 +1,88 @@
-# LAHTP-PASSWORDTEST Tool V-1.0.1 for Linux
+# LAHTP-PASSWORDTEST Tool
 
-Welcome to the LAHTP-PASSWORDTEST tool V-1.0.1. This tool provides functionalities to:
-1. Test the strength of a given password.
-2. Generate a strong password.
+## Version: 1.0.2
 
-This tool helps you evaluate the strength of your password and categorize it as weakest, weak, medium, strong, or strongest based on its score. It also generates secure passwords that adhere to best practices.
+The LAHTP-PASSWORDTEST tool for linux is designed for testing and generating passwords. It helps you:
+1. **Test the strength of your password**
+2. **Generate strong passwords**
+
+This tool evaluates your password based on various criteria and provides feedback on its strength.
 
 ## Features
 
-- **Password Strength Testing**: Validates an input password and provides a strength score.
-- **Password Generation**: Generates a strong password that includes uppercase letters, lowercase letters, digits, and symbols.
-- **Help**: Provides guidance on how to use the tool.
+- **Password Strength Testing**: Evaluates your password against criteria such as length, uppercase, lowercase, digits, and special characters.
+- **Password Generation**: Generates a random strong password with a mix of uppercase, lowercase, digits, and special characters.
 
 ## Usage
 
-To use this tool, you need to pass command-line arguments. The available options are:
+### Compilation
 
-- `-h`: Show the help message and exit.
-- `-g`: Generate a strong password.
-- `-t <password>`: Test the strength of the provided password.
+To compile the tool, use:
+
+```bash
+gcc -o lahtp_passwordtest lahtp_passwordtest.c
+```
+
+### Commands
+
+- **Help**: Display help message
+    ```bash
+    ./lahtp_passwordtest -h
+    ```
+
+- **Generate Password**: Generate a strong password
+    ```bash
+    ./lahtp_passwordtest -g
+    ```
+
+- **Test Password**: Test the strength of a provided password
+    ```bash
+    ./lahtp_passwordtest -t <password>
+    ```
 
 ### Examples
 
-#### Show Help
+1. **Generate a Password**:
+    ```bash
+    ./lahtp_passwordtest -g
+    ```
 
-```sh
-./password_tool -h
-```
+2. **Test a Password**:
+    ```bash
+    ./lahtp_passwordtest -t MyP@ssw0rd123!
+    ```
 
-#### Generate a Password
+## Description
 
-```sh
-./password_tool -g
-```
+### Options
 
-#### Test a Password
+- `-h` : Show help message and exit.
+- `-g` : Generate a strong password.
+- `-t <password>` : Test the strength of the provided password.
 
-```sh
-./password_tool -t YourPassword123!
-```
+### Password Validation
 
-## Password Strength Criteria
+The tool checks the following criteria for password strength:
 
-To achieve the strongest score, your password must:
-- Be at least 8 characters long.
-- Contain at least one uppercase letter.
-- Contain at least three lowercase letters.
-- Contain at least one symbol.
-- Contain at least three numeric characters.
+- Minimum length of 8 characters.
+- At least 2 uppercase letters.
+- At least 3 lowercase letters.
+- At least 3 digits.
+- At least 2 special characters (e.g., !@#$-^&*()_+|).
 
-Passwords containing sequences of consecutive numbers are flagged as potentially weaker.
+It also detects sequences of consecutive numbers and provides feedback if the password does not meet the required criteria.
 
+### Password Strength Levels
 
+- **Weakest**: The password is very weak.
+- **Weak**: The password is weak but can be improved.
+- **Average**: The password is average in strength.
+- **Medium**: The password is medium strength.
+- **Strong**: The password is strong.
+- **Strongest**: The password is very strong.
 
-## Compilation
+## Code Overview
 
-To compile the program, use the following command:
+The code consists of functions for generating passwords, testing password strength, analyzing password properties, and evaluating the password based on predefined criteria.
 
-```sh
-gcc -o password_tool password_tool.c
-```
-
-
----
-
-This README provides a comprehensive guide on how to use the LAHTP-PASSWORDTEST tool V-1.0.1. If you have any questions or need further assistance, please refer to the help option `-h` or contact the author.
+Thank you!

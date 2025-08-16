@@ -161,14 +161,14 @@ static void print_help(void)
         printf("                                                  /_/  \\____/\\____/_____/                 \n");
         printf("%s", reset);
 
-        printf("\n %s                                  - 0xD4rkEYe %s\n",
+        printf("\n %s                                                           - @0xD4rkEYe %s\n",
                bmag, reset);
         printf("%sOptions:%s \n", bcyn, reset);
-        printf("%s\t-h  --help%s                 %s Show this help message and exit%s\n",
+        printf("%s\t[-h]  [--help]%s                 %s Show this help message and exit%s\n",
                byel, reset, bgrn, reset);
-        printf("%s\t-g  --gen%s                  %sGenerate a strong password%s\n",
+        printf("%s\t[-g]  [--gen]%s                  %s Generate a strong password%s\n",
                byel, reset, bgrn, reset);
-        printf("%s\t-t  --test%s %s<password>%s       %sTest the strength of the provided password%s\n",
+        printf("%s\t[-t]  [--test]%s %s<password>%s       %sTest the strength of the provided password%s\n",
                byel, reset, bwht, reset, bgrn, reset);
 }
 
@@ -212,7 +212,7 @@ static void test_password_strength(const char *password)
                 exit(EXIT_FAILURE);
         }
 
-        printf("%s********** Password Validation **********%s\n", bblu, reset);
+        printf("\n%s********** Password Validation **********%s\n", bblu, reset);
         printf("%sEntered password%s: %s%s%s\n", bcyn, reset, bgrn,
                password, reset);
 

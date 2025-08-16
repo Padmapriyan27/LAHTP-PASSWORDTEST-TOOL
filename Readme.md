@@ -70,4 +70,4 @@ The tool evaluates passwords based on:
 
 ## Requirements
 - C compiler (GCC recommended)
-- PS or Linux/Unix terminal (for color support)
+- PS or Unix like terminal (for color support)
